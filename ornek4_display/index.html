@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="display-3 text-center text-info">DISPLAY</h1>
+      <!-- ? Aynı CSS'de olduğu gibi Bootstrap ile de nesnelerin display özellikleri değiştirilebilir.
+           ? Display classları hakkında ayrıntılı bilgi için 
+           ! https://getbootstrap.com/docs/5.0/utilities/display/ -->
+    
+    <!-- ? d- ile baslayan komutlar display komutlardir.
+         ? 1) d-none : Elementi gizler (Extra Small olan ekranlari gozukmesin istersem bunu kullanilirim.)
+         ? d-none ile gorunmez olan bir nesne daha sonrasinda 
+         ? alt taraftakilerden biri kullanildiginda gorunur hale gelir
+         ? 2) d-block 
+         ? 3) d-inline 
+         ? 4) d-inline-block
+         ? 5) d-flex 
+         ? Breakpoint degerleri kullanarak istenilen cozunurlukte display ozelligi verilebilir. -->
+
+         <!-- * 1) Sadece xs ekranlarda gözükecek bir element tasarlayınız.
+              * 2) Sadece xs ekranlarda gözükmeyecek bir element tasarlayınız.
+              * 3) Sadece md ekranlarda gözükecek bir element tasarlayınız.
+              * 4) Sadece md ekranlarda gözükmeyecek bir element tasarlayınız.
+              * 5) Sadece md+ ekranlarda gözükecek bir element tasarlayınız. -->
+        <div class="container text-center">
+          <div class="d-sm-none bg-danger">1) SM ve daha ustunde gozukmem</div>
+          <!-- ? 1) d-sm-none : sm boyutu ve sonrasinda bu div' yazisi gozukmez. -->
+
+          <div class="d-none d-sm-block bg-warning">2</div>
+          <!-- ? sm haric her yerde gozukur. -->
+
+        <div class="d-none d-md-block d-lg-none bg-info">3</div>
+        <!-- ? sadece md'lerde calisir. -->
+      </div>
+
+    <div class="container d-flex">
+
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>
