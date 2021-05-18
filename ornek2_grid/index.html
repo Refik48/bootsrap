@@ -4,12 +4,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- ? Grid Sayfayi 12 parcaya boler -->
     <!-- ? Bootstrap'i lokalden calistirmak icin Boostrap indirerek dosyaları proje dosyamıza
          ? (Örneğin assets/lib klasörüne) ekleyebiliriz. 
          ? Sonrasında ise aşağıdaki gibi bootstrap.min.css dosyasına link verebiliriz. -->
 
-    <!--? Ayrıca sayfanın en sonuna doğru Bootstrap JS kodlarını da kullanamk istersek 
-        <script> etiketi ile ana js kodunu eklememiz gerekir. -->
+    <!-- ? Ayrıca sayfanın en sonuna doğru Bootstrap JS kodlarını da kullanamk istersek 
+         ? <script> etiketi ile ana js kodunu eklememiz gerekir. -->
     <link
       rel="stylesheet"
       href="assets/lib/bootstrap-5.0.1-dist/css/bootstrap.css"
@@ -18,10 +19,10 @@
   </head>
   <body>
     <!-- ? Boostrap'de nesnelerimizi taşıyacak ana container'ların dışında 
-        row (satır) ve col (sutun) adında container yapısı da mevcuttur. -->
+         ? row (satır) ve col (sutun) adında container yapısı da mevcuttur. -->
 
-    <!-- ** Boostrap bir web sayfasını 12 eşit ızgaraya (col) bölünmüştür ve bu sutunlar 
-        aksi belirtilmediği sürece eşit şekilde sayfaya yayılırlar. -->
+    <!-- ? Boostrap bir web sayfasını 12 eşit ızgaraya (col) bölünmüştür ve bu sutunlar 
+         ? aksi belirtilmediği sürece eşit şekilde sayfaya yayılırlar. -->
 
     <div class="container">
       <h1 class="display-1 text-center text-primary">BOOSTRAP GRID</h1>
@@ -36,16 +37,20 @@
       </div>
     </div>
 
-    <!-- ? Sutunlarin kaplayacağı alanı belirtmek için col-x şeklinde bir atama yapılabilir. -->
+    <!-- ? Sutunlarin kaplayacağı alanı belirtmek için col-x şeklinde bir atama yapılabilir. 
+         ? Eger belirtmezsek ESIT SEKILDE kendilerine verilen alani paylasacaklardir.-->
 
-    <!-- ? ızgaraların mevcut alanda nasıl hizalanacağını belirlemek için 
+    <!-- ? Izgaraların mevcut alanda nasıl hizalanacağını belirlemek için 
          ? justify-content sınıfı kullanılır. Bu konuda ek açıklama için 
-     ! https://getbootstrap.com/docs/5.0/utilities/flex/#justify-content -->
+         ! https://getbootstrap.com/docs/5.0/utilities/flex/#justify-content -->
+
     <div class="container-fluid">
-      <div class="row justify-content-center">
+      <div class="row justify-content-end">
+          <!-- ? End ile en saga attim. -->
         <div class="col-6 bg-warning">6</div>
         <div class="col-4 bg-success">4</div>
       </div>
+      
       <div class="row">
         <div class="col-4 bg-danger">4</div>
         <div class="col-4 bg-secondary">4</div>
