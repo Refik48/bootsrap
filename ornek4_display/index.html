@@ -8,7 +8,12 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
+
   </head>
   <body>
     <div class="container">
@@ -27,11 +32,11 @@
          ? 5) d-flex 
          ? Breakpoint degerleri kullanarak istenilen cozunurlukte display ozelligi verilebilir. -->
 
-         <!-- * 1) Sadece xs ekranlarda gözükecek bir element tasarlayınız.
-              * 2) Sadece xs ekranlarda gözükmeyecek bir element tasarlayınız.
-              * 3) Sadece md ekranlarda gözükecek bir element tasarlayınız.
-              * 4) Sadece md ekranlarda gözükmeyecek bir element tasarlayınız.
-              * 5) Sadece md+ ekranlarda gözükecek bir element tasarlayınız. -->
+         <!-- ? 1) Sadece xs ekranlarda gözükecek bir element tasarlayınız.
+              ? 2) Sadece xs ekranlarda gözükmeyecek bir element tasarlayınız.
+              ? 3) Sadece md ekranlarda gözükecek bir element tasarlayınız.
+              ? 4) Sadece md ekranlarda gözükmeyecek bir element tasarlayınız.
+              ? 5) Sadece md+ ekranlarda gözükecek bir element tasarlayınız. -->
         <div class="container text-center">
           <div class="d-sm-none bg-danger">1) SM ve daha ustunde gozukmem</div>
           <!-- ? 1) d-sm-none : sm boyutu ve sonrasinda bu div' yazisi gozukmez. -->
@@ -43,8 +48,56 @@
         <!-- ? sadece md'lerde calisir. -->
       </div>
 
-    <div class="container d-flex">
+       <!-- ? fixed-top sayfanın üzerine fixed-bottom ise sayfanın altına nesneleri yapıştırır.
+            ? Ayrıntılı bilgi için 
+            ! https://getbootstrap.com/docs/4.0/utilities/position/ -->
 
+      <!-- ? margin ve padding hakkında ayrıntılı bilgi için
+            ! https://getbootstrap.com/docs/5.0/utilities/spacing/ -->
+
+    <div class="container d-flex justify-content-between p-3 bg-dark text-light p-2">
+      <!-- ? Container icindeki yazilan simge logo vs. seylerin ne tarafta olacaginin 
+           ? kodunu hatirlamak icin google'a "flex justify" yaz. -->
+           
+      <!-- ? Bootstrap'de her sey container uzerinden yapilir.
+           ? Resim eklemek icin fontaweome eklememiz gerekiyor.
+           ? google'a fontawesome cdn link diyoruz, ekleme linkini buraya yapistiracagiz.
+           ! https://cdnjs.com/libraries/font-awesome 
+           ? bu siteden ilk basta olan butun hepsini iceren "all" linkini yukari link yerine yapistiriyorum. -->
+        <div>
+           <i class="fas fa-phone text-warning"></i>
+           <span class="d-none d-md-inline">+90 555 123 45 67</span>
+           <!-- ? Sayfa boyutu medium'da iken gozuksun daha azinda iken gozukmesin. -->
+           <i class="fab fa-whatsapp text-warning ms-3"></i>
+           <span class="d-none d-md-inline">+90 555 123 45 67</span>
+           <!-- ? Bunlari bir div icine daha aldim cunku iconlar kaymis, numaralar hizali gozukmuyordu. -->
+        </div>   
+      <!-- ? Iconlar icin fontawesome.com'dan resmi bulup kopyalip buraya yapistiriyoruz. -->
+      <!-- ? Bg'nin black text'in beyaz olmasi icin "div" tag'ine yaziyoruz. -->
+
+      <div>
+        <i class="fab fa-twitter text-info mx-2"></i>
+        <i class="fab fa-youtube text-info mx-2"></i>
+        <i class="fab fa-instagram text-info mx-2"></i>
+        <span class="d-none d-lg-inline">#techproed</span>
+      </div>
+
+      <!-- ? p : padding 
+           ? m : margin
+           ? t : top
+           ? b : bottom
+           ? s : start
+           ? e : end
+           ? x : start & end (x ekseni)
+           ? y : top & bottom (y ekseni)
+           ? 0-6 : mesafe 
+           ? auto : margin icin
+           ? Kisaltmalar bu sekilde, ufak orneklerle biraz daha acalim.
+           ? m-4 : Dort kenardan 4 birim margin verir.
+           ? mt-2 : ust taraftan 2 birim margin verir.
+           ? mx-auto : sol ve sag marginleri auto yapar.
+           ? pe-2 : sag taraftan 2 birim padding verir.
+           ? py-0 : ust ve alt marginleri sifirlar. -->
     </div>
 
     <script src="js/bootstrap.bundle.js"></script>
